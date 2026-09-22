@@ -38,8 +38,8 @@ int main()
             totalPayment = totalPayment + totalPrice;
 
             cout << fixed << setprecision(2);
-            cout << "Total price for " << quantity << " "
-                 << product << " is RM" << totalPrice << endl;
+            cout << "Total price for " << quantity << " " ;
+            cout << product << " is RM" << totalPrice << endl;
             cout << endl;
         }
         else if (choice == 4)
