@@ -4,6 +4,7 @@
 using namespace std;
 
 // Function prototypes
+void pageHeader() ;
 void displayMenu();
 double getPrice(int choice);
 string getProduct(int choice);
@@ -18,6 +19,9 @@ int main()
     double totalPayment = 0;
     double balance;
     string product;
+
+	pageHeader() ;
+	cout << endl ;
 
     do
     {
@@ -38,8 +42,8 @@ int main()
             totalPayment = totalPayment + totalPrice;
 
             cout << fixed << setprecision(2);
-            cout << "Total price for " << quantity << " "
-                 << product << " is RM" << totalPrice << endl;
+            cout << "Total price for " << quantity << " " ;
+            cout << product << " is RM" << totalPrice << endl;
             cout << endl;
         }
         else if (choice == 4)
@@ -63,14 +67,16 @@ int main()
     return 0;
 }
 
+//Function to display one-time page header
+void pageHeader(){
+	cout << "*******************" << endl;
+    cout << "Welcome to Mike Shop" << endl;
+    cout << "*******************" << endl;
+}
 
 // Function to display menu
 void displayMenu()
 {
-    cout << "*******************" << endl;
-    cout << "Welcome to Mike Shop" << endl;
-    cout << "*******************" << endl;
-
     cout << "List of product and price per unit" << endl;
     cout << "1. Soap RM3.50" << endl;
     cout << "2. Shampoo RM6.80" << endl;
